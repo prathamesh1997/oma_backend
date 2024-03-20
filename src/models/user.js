@@ -74,12 +74,10 @@ const userSchema = new Schema({
     default:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png',
   },
-  //NOTE: To check whether the account is active or not. When user deletes the account, you can store the information anonymously.
   isActivated: {
     type: Boolean,
     default: true,
   },
-  //NOTE: To check whether the user skipped the email-verification step or not. You can delete the unverified accounts day by day.
   isVerified: {
     type: Boolean,
     required: true
@@ -87,13 +85,11 @@ const userSchema = new Schema({
   deviceId: {
     type: String,
   },
-  //NOTE: You can add more options acc. to your need.
   platform: {
     type: String,
     enum: ['Android', 'IOS'],
     required: true
   },
-  //NOTE: In case the user delete its account, you can store its non-personalized information anonymously.
   deletedAt: {
     type: Date
   }
