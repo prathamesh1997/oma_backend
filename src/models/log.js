@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
-x
+
 const logSchema = new Schema({
   userId: { type: mongoose.Schema.Types.ObjectId },
   resultCode: { type: String, required: true },
